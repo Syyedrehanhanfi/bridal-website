@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -57,7 +60,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto"
           >
             <a
-              href="https://wa.me/917668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
+              href="https://wa.me/7668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
               target="_blank"
               rel="noreferrer"
               className="group relative w-full sm:w-auto px-10 py-4 bg-brown-900 text-cream-100 uppercase tracking-widest text-sm font-semibold overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 text-center"
@@ -65,8 +68,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gold-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
               <span className="relative z-10 group-hover:text-brown-900 transition-colors duration-500">Book Appointment</span>
             </a>
-            <a
-              href="#gallery"
+            <a href="#gallery"
               className="w-full sm:w-auto px-10 py-4 border border-brown-900 text-brown-900 uppercase tracking-widest text-sm font-medium hover:bg-brown-900 hover:text-white transition-colors duration-300 text-center"
             >
               View Portfolio
@@ -87,10 +89,13 @@ export default function Hero() {
             <div className="absolute -inset-4 border-2 border-gold-500/40 rounded-t-full rounded-b-2xl z-0"></div>
             
             <div className="relative w-full h-full rounded-t-full rounded-b-2xl overflow-hidden shadow-2xl z-10 border border-white">
-              <img 
+              <Image 
                 src="/hero-main.jpeg" 
                 alt="Beautiful Mehndi Design" 
-                className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover transition-transform duration-1000 hover:scale-105"
+                priority
               />
             </div>
 
@@ -101,10 +106,12 @@ export default function Hero() {
               transition={{ delay: 1, duration: 0.8 }}
               className="absolute -bottom-6 -left-6 sm:-left-12 w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-cream-100 shadow-xl overflow-hidden z-20"
             >
-              <img 
+              <Image 
                 src="/hero-sub.jpeg" 
                 alt="Mehndi Detail" 
-                className="w-full h-full object-cover"
+                fill
+                sizes="160px"
+                className="object-cover"
               />
             </motion.div>
             

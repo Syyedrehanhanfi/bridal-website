@@ -1,3 +1,5 @@
+"use client";
+
 import AnimatedSection from './AnimatedSection';
 
 export default function Pricing() {
@@ -54,7 +56,7 @@ export default function Pricing() {
 
             <div className="text-center relative z-10">
               <a 
-                href="https://wa.me/917668715610?text=Hi,%20I%20would%20like%20to%20inquire%20about%20the%20Luxury%20Bridal%20Mehndi%20Package" 
+                href="https://wa.me/7668715610?text=Hi,%20I%20would%20like%20to%20inquire%20about%20the%20Luxury%20Bridal%20Mehndi%20Package" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="inline-flex w-full justify-center items-center gap-2 px-6 py-3 bg-gold-600 text-brown-900 uppercase tracking-[0.2em] text-[10px] font-bold rounded-xl hover:bg-white hover:text-brown-900 transition-colors duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)]"

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -54,7 +56,7 @@ export default function Navbar() {
           ))}
           
           <a
-            href="https://wa.me/917668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
+            href="https://wa.me/7668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
             target="_blank"
             rel="noreferrer"
             className="px-6 py-2.5 border border-brown-900 text-brown-900 text-xs font-bold tracking-widest uppercase hover:bg-brown-900 hover:text-gold-500 transition-all duration-300 shadow-sm hover:shadow-md"
@@ -102,7 +104,7 @@ export default function Navbar() {
               ))}
               
               <motion.a
-                href="https://wa.me/917668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
+                href="https://wa.me/7668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
                 target="_blank"
                 rel="noreferrer"
                 initial={{ opacity: 0, scale: 0.9 }}

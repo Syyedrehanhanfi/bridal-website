@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+# TODO: Replace with actual Website URL
+Sitemap: https://rishimehndi.shop/sitemap.xml

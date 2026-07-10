@@ -1,5 +1,8 @@
+"use client";
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import AnimatedSection from './AnimatedSection';
 
 const categories = ['All Designs', 'Bridal', 'Arabic', 'Modern', 'Foot Mehndi'];
@@ -120,10 +123,12 @@ export default function Gallery() {
                 
                 {/* Arch Container */}
                 <div className="relative overflow-hidden w-full aspect-[3/4] rounded-t-full rounded-b-lg shadow-xl z-10 bg-white">
-                  <img 
+                  <Image 
                     src={img.src} 
-                    alt={`${img.category} Mehndi Design`} 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                    alt={`${img.category} Mehndi Design by Rishi Mehndi Art in Gurugram`} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     loading="lazy"
                   />
                   {/* Elegant Overlay */}
@@ -184,16 +189,22 @@ export default function Gallery() {
               </svg>
               <span className="text-sm font-medium tracking-wider uppercase">Close</span>
             </button>
-            <motion.img
+            <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              src={selectedImage.src}
-              alt={`${selectedImage.category} Design Full View`}
-              className="max-w-full max-h-[75vh] md:max-h-[80vh] object-contain rounded-md shadow-2xl mb-12"
+              className="relative w-full max-w-4xl h-[75vh] md:h-[80vh] mb-12"
               onClick={(e) => e.stopPropagation()}
-            />
+            >
+              <Image
+                src={selectedImage.src}
+                alt={`${selectedImage.category} Mehndi Design Full View by Rishi Mehndi Art`}
+                fill
+                sizes="100vw"
+                className="object-contain rounded-md shadow-2xl"
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

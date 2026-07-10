@@ -1,0 +1,16 @@
+{
+  "name": "Rishi Mehndi Art",
+  "short_name": "Rishi Mehndi",
+  "description": "Premium professional Mehndi artist in Gurugram.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFBF7",
+  "theme_color": "#B08B5B",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

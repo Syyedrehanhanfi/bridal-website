@@ -1,5 +1,8 @@
+"use client";
+
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import AnimatedSection from './AnimatedSection';
 
 const services = [
@@ -59,10 +62,12 @@ export default function Services() {
                   className="w-full lg:w-1/2 relative group"
                 >
                   <div className="relative w-full aspect-square md:aspect-[4/5] max-w-sm lg:max-w-md mx-auto lg:mx-0 overflow-hidden shadow-2xl">
-                    <img 
+                    <Image 
                       src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                      alt={`${service.title} Design by Rishi Mehndi Art in Gurugram`} 
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     />
                     {/* Inner elegant border overlay */}
                     <div className="absolute inset-4 border border-white/30 z-10 pointer-events-none transition-all duration-700 group-hover:inset-5"></div>
@@ -98,8 +103,7 @@ export default function Services() {
                       {service.description}
                     </p>
 
-                    <a 
-                      href="#contact" 
+                    <a href="#contact" 
                       className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold text-brown-900 hover:text-gold-600 transition-colors group/link"
                     >
                       Book This Service

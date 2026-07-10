@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, MessageCircle } from 'lucide-react';
@@ -36,7 +38,7 @@ export default function FloatingActions() {
       </AnimatePresence>
 
       <motion.a
-        href="https://wa.me/917668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
+        href="https://wa.me/7668715610?text=Hi%2C%20I%20would%20like%20to%20book%20a%20Mehndi%20appointment"
         target="_blank"
         rel="noreferrer"
         initial={{ scale: 0 }}
